@@ -5,3 +5,4 @@ Useful links:
 - https://github.com/selenide/selenide/wiki/Selenide-vs-Selenium
 - https://github.com/bonigarcia/webdrivermanager
 - https://bonigarcia.dev/webdrivermanager/
+- https://github.com/kentcdodds/Java-Helper
