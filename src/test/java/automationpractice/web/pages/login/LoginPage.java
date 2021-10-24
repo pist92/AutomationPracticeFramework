@@ -15,10 +15,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginPage extends AbstractPage {
 
-
-
-
-
     private final WebElement emailInput = Selenide.$x("//input[@id='email']");
     private final WebElement passwordInput = Selenide.$x("//input[@id='passwd']");
     private final WebElement signInButton = Selenide.$x("//button[@id='SubmitLogin']");
