@@ -7,11 +7,15 @@ public class EnvConfig {
     static final Logger log = Logger.getLogger(EnvConfig.class);
 
     public static String loginPageUrl;
-
+    public static String contactUsPageUrl;
 
     static {
         loginPageUrl = "http://automationpractice.com/index.php?controller=authentication&back=my-account";
 
+    }
+
+    static {
+        contactUsPageUrl = "http://automationpractice.com/index.php?controller=contact";
     }
 
 }

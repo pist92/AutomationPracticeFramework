@@ -1,11 +1,11 @@
 package automationpractice.web.pages.contactUs;
 
 import automationpractice.web.pages.AbstractPage;
-import automationpractice.web.pages.login.LoginPage;
+import com.automationpractiveframework.utils.EnvConfig;
+import com.automationpractiveframework.utils.WaitsUtils;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
 import org.openqa.selenium.WebElement;
-import com.automationpractiveframework.utils.
 
 public class ContactUsPage extends AbstractPage {
 
@@ -18,11 +18,32 @@ public class ContactUsPage extends AbstractPage {
 
 
     public ContactUsPage getPage(){
-        WaitsUtils.waitForWebelementToBeVisible();
+        WaitsUtils.waitForWebElementToBeVisible(emailAddressInput);
+        return this;
     }
 
     public ContactUsPage navigateToPage(){
-        WebDriverRunner.getWebDriver().navigate().to(EnvConfig.loginPageUrl);
+        WebDriverRunner.getWebDriver().navigate().to(EnvConfig.contactUsPageUrl);
         return getPage();
+    }
+
+    public boolean isSubjectHeadingPresent() {
+        return subjectHeadingCheckbox.isDisplayed();
+    }
+
+    public boolean isEmailAddressPresent() {
+        return emailAddressInput.isDisplayed();
+    }
+
+    public boolean isAttachFileButton() { return attachFileButton.isDisplayed(); }
+
+    public boolean isSendButton() { return sendButton.isDisplayed(); }
+
+    public boolean isOtherReferencePresent() {
+        return otherReferenceInput.isDisplayed();
+    }
+
+    public boolean isMessagePresent() {
+        return messageInput.isDisplayed();
     }
 }
