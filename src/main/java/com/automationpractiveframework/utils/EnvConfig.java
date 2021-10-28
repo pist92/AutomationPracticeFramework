@@ -11,11 +11,10 @@ public class EnvConfig {
 
     static {
         loginPageUrl = "http://automationpractice.com/index.php?controller=authentication&back=my-account";
-
-    }
-
-    static {
         contactUsPageUrl = "http://automationpractice.com/index.php?controller=contact";
+
+
     }
+
 
 }

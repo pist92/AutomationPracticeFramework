@@ -20,4 +20,17 @@ public class AbstractPage {
     }
 
 
+    public void clickButton(WebElement element){
+        element.click();
+    }
+    public void isElemeDis(WebElement element){
+        element.isDisplayed();
+    }
+
+
+
+
+
+
+
 }

@@ -15,12 +15,14 @@ import org.testng.annotations.Guice;
 import org.testng.annotations.Test;
 
 import static com.automationpractiveframework.utils.EnvConfig.contactUsPageUrl;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 @Guice
 public class ContactUsTest extends BaseWebTest {
 
     @Inject
     private ContactUsHelper contactUsHelper;
+    @Inject
     private ContactUsPage contactUsPage;
 
     @BeforeMethod(alwaysRun = true)
@@ -30,31 +32,22 @@ public class ContactUsTest extends BaseWebTest {
 
     @Test
     public void openContactUsPageTest() {
-        WebDriver driver = new ChromeDriver();
-        driver.get(contactUsPageUrl);
-        WebElement emailAddressInput = driver.findElement(By.xpath("//input[@id='email']"));
-        emailAddressInput.isSelected();
-        WebElement sendButton = driver.findElement(By.xpath("//span[contains(text(),'Send')]"));
-        sendButton.click();
-        WaitsUtils.waitForWebElementToBeVisible(contactUsPage.errorMessageText);
-        driver.quit();
-
-        Assert.assertEquals("Invalid email address.", "Invalid email address.");
-
+        Assert.assertEquals(contactUsHelper.CheckError("some"),"Invalid email address.");
     }
 
-    @Test
-    public void validationEmailAddressTest(){
-        WebDriver driver = new ChromeDriver();
-        driver.get(contactUsPageUrl);
-        WebElement emailAddressInput = driver.findElement(By.xpath("//input[@id='email']"));
-        emailAddressInput.sendKeys("some");
-        WebElement sendButton = driver.findElement(By.xpath("//span[contains(text(),'Send')]"));
-        sendButton.click();
-        driver.quit();
 
-        Assert.assertEquals("some", "some@gmail.com");
-    }
+//    @Test
+//    public void validationEmailAddressTest(){
+//        WebDriver driver = new ChromeDriver();
+//        driver.get(contactUsPageUrl);
+//        WebElement emailAddressInput = driver.findElement(By.xpath("//input[@id='email']"));
+//        emailAddressInput.sendKeys("some");
+//        WebElement sendButton = driver.findElement(By.xpath("//span[contains(text(),'Send')]"));
+//        sendButton.click();
+//        driver.quit();
+//
+//        Assert.assertEquals("some", "some@gmail.com");
+//    }
 
 
 

@@ -20,6 +20,7 @@ public class ContactUsPage extends AbstractPage {
 
     public ContactUsPage getPage(){
         WaitsUtils.waitForWebElementToBeVisible(emailAddressInput);
+        isElemeDis(attachFileButton);
         return this;
     }
 
@@ -28,27 +29,38 @@ public class ContactUsPage extends AbstractPage {
         return getPage();
     }
 
+    public ContactUsPage isPageLoad(){
+        WaitsUtils.waitForWebElementToBeVisible(attachFileButton);
+       return this;
+    }
+
     public boolean isSubjectHeadingPresent() {
         return subjectHeadingCheckbox.isDisplayed();
+    }
+
+    public void fillEmail(String value) {
+        emailAddressInput.clear();
+    }
+
+    public void clearField(WebElement element) {
+        element.clear();
     }
 
     public boolean isEmailAddressPresent() {
         return emailAddressInput.isDisplayed();
     }
 
-    public boolean isAttachFileButton() { return attachFileButton.isDisplayed(); }
+    public void ClicksendButton() {
+        sendButton.click();
+    }
 
-    public boolean isSendButton() { return sendButton.isDisplayed(); }
 
     public boolean isOtherReferencePresent() {
+        clickButton(sendButton);
         return otherReferenceInput.isDisplayed();
+
     }
 
-    public boolean isMessagePresent() {
-        return messageInput.isDisplayed();
-    }
 
-    public boolean isErrorMessageText() {return errorMessageText.isDisplayed();
-    }
 
 }
