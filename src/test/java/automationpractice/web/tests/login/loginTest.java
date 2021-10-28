@@ -24,4 +24,6 @@ public class loginTest extends BaseWebTest {
         Assert.assertTrue(3==3);
 //        assertThat("Login page isn't loaded", loginHelper.isPageLoaded(), Matchers.equalTo(true));
     }
+
+
 }

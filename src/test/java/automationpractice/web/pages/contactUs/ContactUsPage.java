@@ -15,6 +15,7 @@ public class ContactUsPage extends AbstractPage {
     private final WebElement attachFileButton = Selenide.$x("//span[contains(text(),'Choose File')]");
     private final WebElement sendButton = Selenide.$x("//span[contains(text(),'Send')]");
     private final WebElement messageInput = Selenide.$x("//textarea[@id='message']");
+    public final WebElement errorMessageText = Selenide.$x("//li[contains(text(),'Invalid email address.')]");
 
 
     public ContactUsPage getPage(){
@@ -46,4 +47,8 @@ public class ContactUsPage extends AbstractPage {
     public boolean isMessagePresent() {
         return messageInput.isDisplayed();
     }
+
+    public boolean isErrorMessageText() {return errorMessageText.isDisplayed();
+    }
+
 }

@@ -18,4 +18,6 @@ public class ContactUsHelper {
         System.out.println("Check if 'contactUs' page loaded - " + result);
         return result;
     }
+
+
 }
