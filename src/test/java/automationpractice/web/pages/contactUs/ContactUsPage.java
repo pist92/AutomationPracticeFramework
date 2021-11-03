@@ -50,7 +50,7 @@ public class ContactUsPage extends AbstractPage {
         return emailAddressInput.isDisplayed();
     }
 
-    public void ClicksendButton() {
+    public void ClickSendButton() {
         sendButton.click();
     }
 

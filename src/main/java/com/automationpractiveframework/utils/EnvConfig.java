@@ -8,11 +8,12 @@ public class EnvConfig {
 
     public static String loginPageUrl;
     public static String contactUsPageUrl;
+    public static String signInUrl;
 
     static {
         loginPageUrl = "http://automationpractice.com/index.php?controller=authentication&back=my-account";
         contactUsPageUrl = "http://automationpractice.com/index.php?controller=contact";
-
+        signInUrl = "http://automationpractice.com/index.php?controller=authentication&back=my-account";
 
     }
 

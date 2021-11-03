@@ -1,9 +1,7 @@
 package automationpractice.web.helpers.contactUs;
 
 import automationpractice.web.pages.contactUs.ContactUsPage;
-import com.automationpractiveframework.utils.WaitsUtils;
 import com.google.inject.Inject;
-import org.openqa.selenium.WebElement;
 
 public class ContactUsHelper {
 
@@ -24,9 +22,13 @@ public class ContactUsHelper {
 
     public String CheckError(String value){
         contactUsPage.fillEmail(value);
-        contactUsPage.ClicksendButton();
+        contactUsPage.ClickSendButton();
         return contactUsPage.errorMessageText.getText();
     }
 
-
+    public String CheckValidationError(String value){
+        contactUsPage.fillEmail(value);
+        contactUsPage.ClickSendButton();
+        return contactUsPage.errorMessageText.getText();
+    }
 }
