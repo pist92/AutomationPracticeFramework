@@ -11,9 +11,7 @@ public class AbstractPage {
         WebDriverRunner.getWebDriver().navigate().back();
     }
 
-    public void refreshPage() {
-        WebDriverRunner.getWebDriver().navigate().refresh();
-    }
+    public void refreshPage() {WebDriverRunner.getWebDriver().navigate().refresh(); }
 
     public void clickSignInButton(){
         signIn.click();
@@ -23,9 +21,21 @@ public class AbstractPage {
     public void clickButton(WebElement element){
         element.click();
     }
-    public void isElemeDis(WebElement element){
+    // Посмотреть правильно реализован метод isElementDisplayed?
+    public boolean isElementDisplayed(WebElement element){
         element.isDisplayed();
+        return isElementDisplayed(element);
     }
+    // Методы которые я написал в рамках вынесения в общие методы, но которые не реализованы для конкретных страниц
+    public void isElementInput(WebElement element) {element.sendKeys();}
+    public void clearField(WebElement element) { element.clear(); }
+    public void clickDropdown(WebElement element) {element.isSelected();}
+    public void clickTextField(WebElement element) {element.isSelected();}
+    public void enableRadioButton(WebElement element) {element.isEnabled();}
+    //Как реализовать этот метод?
+    public void fillEmail(String value) {}
+
+
 
 
 

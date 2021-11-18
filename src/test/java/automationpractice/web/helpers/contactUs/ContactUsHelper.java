@@ -22,13 +22,13 @@ public class ContactUsHelper {
 
     public String CheckError(String value){
         contactUsPage.fillEmail(value);
-        contactUsPage.ClickSendButton();
+        contactUsPage.clickButton();
         return contactUsPage.errorMessageText.getText();
     }
 
     public String CheckValidationError(String value){
         contactUsPage.fillEmail(value);
-        contactUsPage.ClickSendButton();
+        contactUsPage.clickButton();
         return contactUsPage.errorMessageText.getText();
     }
 }

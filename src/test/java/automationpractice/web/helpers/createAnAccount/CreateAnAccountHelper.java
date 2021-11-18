@@ -1,7 +1,8 @@
-package automationpractice.web.createAnAccount;
+package automationpractice.web.helpers.createAnAccount;
 
 import automationpractice.web.pages.createAnAccount.CreateAnAccountPage;
 import com.google.inject.Inject;
+import org.openqa.selenium.WebElement;
 
 public class CreateAnAccountHelper {
 
@@ -18,9 +19,11 @@ public class CreateAnAccountHelper {
         createAnAccountPage.ClickSendButton();
         return createAnAccountPage.errorMessageTextAnAccount.getText();
     }
-    public String CheckLabelText(String value){
-        createAnAccountPage.notify();
-        return createAnAccountPage.createAnAccountLabel.getText();
+    public String CheckLabelText(WebElement value){
+        if (value.isDisplayed()){
+            return createAnAccountPage.createAnAccountLabel.getText();
+        }
+        return ("Element is Not shown");
     }
 
     public String CheckInfoForm(String value){

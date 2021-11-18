@@ -1,13 +1,15 @@
 package com.automationpractiveframework.tasks;
 
-import org.openqa.selenium.By;
+import com.codeborne.selenide.Selenide;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.List;
+import java.util.ArrayList;
+import java.util.Collection;
 
 /*
 Проверить является ли: About Ranks первым пунктом меню
@@ -18,7 +20,7 @@ import java.util.List;
 URL:https://testautomationu.applitools.com/learningpaths.html
 Меню: About Ranks
 Задание 2:
-Создать листы WebTesting, ApiTesting ,с заголовков  (например Web UI Java Pathи т.д) ,
+Создать листы WebTesting, ApiTesting ,с заголовков  (например Web UI Java Path и т.д) ,
 в лист WebTesting поместить все заголовки ,которые начинаются с Web  а в API которые начинаются с API
 (Для успешного выполнения нужно обновить знания по коллекциям)
 */
@@ -29,5 +31,52 @@ public class Task_1 {
         WebDriver driver = new ChromeDriver(options);
         WebDriverWait wait =  new WebDriverWait(driver,10);
 
+        // Задание 1
+         final WebElement AboutRanksLink = Selenide.$x("//a[starts-with(@href, '/ranks.html') and contains(text(),\"About Ranks\")]");
+         final WebElement TAU100Link = Selenide.$x("//a[starts-with(@href, '/tau100.html') and contains(text(),\"TAU 100\")]");
+         final WebElement LearningPathLink = Selenide.$x("//a[starts-with(@href, '/learningpaths.html') and contains(text(),\"Learning Paths\")]");
+         final WebElement CertificatesLink = Selenide.$x("//a[starts-with(@href, '/certificate/index.html') and contains(text(),\"Certificates\")]");
+         final WebElement TAUSlackLink = Selenide.$x("//a[starts-with(@href, 'https://tauslacksignupapp.herokuapp.com/') and contains(text(),\"  TAU Slack\")]");
+         final WebElement SerhiiKutsenkoLink = Selenide.$x("//a[starts-with(@href, '/profile.html') and contains(text(),\"Serhii Kutsenko\")]");
+         final WebElement LogoutLink = Selenide.$x("//a[starts-with(@href, '#') and contains(text(),\"Logout\")]");
+
+        ArrayList<WebElement> menu = new ArrayList<WebElement>();
+        menu.add(AboutRanksLink);
+        menu.add(TAU100Link);
+        menu.add(LearningPathLink);
+        menu.add(CertificatesLink);
+        menu.add(TAUSlackLink);
+        menu.add(SerhiiKutsenkoLink);
+        menu.add(LogoutLink);
+
+        Assert.assertEquals(AboutRanksLink, LearningPathLink);
+
+        //Задание 2
+        WebElement WebUIJavaPath = Selenide.$x("//*[starts-with(@class, 'text-center') and contains(text(),\"Web UI Java Path\")]");
+        ArrayList<WebElement> webTesting = new ArrayList<WebElement>((Collection<? extends WebElement>) WebUIJavaPath);
+
+        final WebElement SettingAFoundationForSuccessfulTestAutomation = Selenide.$x("//span[normalize-space(.)='Setting a Foundation for Successful Test Automation' and contains (@xpath, '1')]");
+
+        webTesting.add();
+        webTesting.add();
+        webTesting.add();
+        webTesting.add();
+        webTesting.add();
+        webTesting.add();
+
+        WebElement APIJavaPath = Selenide.$x("//*[starts-with(@class, 'text-center') and contains(text(),\"API Java Path\")]");
+        ArrayList<WebElement> APITesting = new ArrayList<WebElement>((Collection<? extends WebElement>) APIJavaPath);
+        APITesting.add();
+        APITesting.add();
+        APITesting.add();
+        APITesting.add();
+        APITesting.add();
+        APITesting.add();
+
+
     }
+//a/span[contains(text(),"Setting a Foundation for Successful Test Automation")]
 }
+
+
+////a[starts-with(@href, '/ranks.html') and contains(text(),"About Ranks")]

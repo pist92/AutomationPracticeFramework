@@ -1,6 +1,6 @@
 package automationpractice.web.tests.createAnAccount;
 
-import automationpractice.web.createAnAccount.CreateAnAccountHelper;
+import automationpractice.web.helpers.createAnAccount.CreateAnAccountHelper;
 import automationpractice.web.pages.createAnAccount.CreateAnAccountPage;
 import automationpractice.web.tests.BaseWebTest;
 import com.google.inject.Inject;
@@ -38,7 +38,7 @@ public class CreateAnAccountTest extends BaseWebTest {
     @Test
     public void labelValidationTest(){
 
-        Assert.assertEquals(createAnAccountHelper.CheckLabelText("Please enter your email address to create an account"), "Please enter your email address to create an account");
+        Assert.assertEquals(createAnAccountHelper.CheckLabelText(<"Please enter your email address to create an account"), "Please enter your email address to create an account");
 
     }
 
