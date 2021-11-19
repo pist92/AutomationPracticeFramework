@@ -2,7 +2,7 @@ package com.automationpractiveframework.objectPackage.users;
 
 public class User {
 
-    String role;
+     String role;
 
     String firstName;
     String lastName;

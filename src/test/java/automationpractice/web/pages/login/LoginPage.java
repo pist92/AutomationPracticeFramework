@@ -18,7 +18,7 @@ public class LoginPage extends AbstractPage {
     private final WebElement emailInput = Selenide.$x("//input[@id='email']");
     private final WebElement passwordInput = Selenide.$x("//input[@id='passwd']");
     private final WebElement signInButton = Selenide.$x("//button[@id='SubmitLogin']");
-
+    private final String loginPageUrl = "index.php?controller=authentication&back=my-account";
 
     public LoginPage getPage() {
         WaitsUtils.waitForWebElementToBeVisible(passwordInput);
@@ -26,7 +26,7 @@ public class LoginPage extends AbstractPage {
     }
 
     public LoginPage navigateToPage(){
-        WebDriverRunner.getWebDriver().navigate().to(EnvConfig.loginPageUrl);
+        WebDriverRunner.getWebDriver().navigate().to(EnvConfig.mainPage+EnvConfig.loginPageUrl);
         return getPage();
     }
     public boolean isLoginFieldPresent() {
