@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /*
@@ -33,6 +34,13 @@ public class Task_2 {
         options.addArguments("--headless");
         WebDriver driver = new ChromeDriver(options);
         WebDriverWait wait =  new WebDriverWait(driver,10);
+
+        List<WebElement> mediaExpertList = driver.findElements(By.xpath("//div[@class=\"menu-category-content item-content\"]"));
+
+        List<String> newMediaExpertList = new ArrayList<>();
+
+
+
 
         try {
             Thread.sleep(2000);
