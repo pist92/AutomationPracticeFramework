@@ -9,15 +9,12 @@ public class EnvConfig {
     public static String loginPageUrl;
     public static String contactUsPageUrl;
     public static String signInUrl;
-    public static String pageURL;
-
-    //Как красиво сделать конкатенация строк?
 
     static {
-        loginPageUrl = "/index.php?controller=authentication&back=my-account";
-        contactUsPageUrl = "/index.php?controller=contact";
-        signInUrl = "/index.php?controller=authentication&back=my-account";
-        pageURL = "http://automationpractice.com";
+        loginPageUrl = "http://automationpractice.com/index.php?controller=authentication&back=my-account";
+        contactUsPageUrl = "http://automationpractice.com/index.php?controller=contact";
+        signInUrl = "http://automationpractice.com/index.php?controller=authentication&back=my-account";
+
     }
 
 

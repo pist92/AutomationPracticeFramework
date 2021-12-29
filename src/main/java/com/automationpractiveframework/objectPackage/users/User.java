@@ -1,5 +1,8 @@
 package com.automationpractiveframework.objectPackage.users;
 
+import lombok.Data;
+
+@Data
 public class User {
 
      String role;
