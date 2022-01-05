@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /*
@@ -50,11 +51,10 @@ public class Task_1 {
         }
         System.out.println("LIST SIZE: " + webList.size());
 
-    }
-}
+
 
         //TASK 2
- /*
+
         List<WebElement> webTestingElements =  driver.findElements(By.xpath("//h3[@class='text-center' and contains(text(),\"Web\")]"));
         List<String> webTesting = new ArrayList<>();
 
@@ -73,4 +73,6 @@ public class Task_1 {
             System.out.println(apiTestingElements);
         }
        System.out.println("LIST SIZE OF API" + apiTestingElements.size());
- */
+
+    }
+}

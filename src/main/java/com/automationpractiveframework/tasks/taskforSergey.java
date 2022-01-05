@@ -3,11 +3,16 @@ package com.automationpractiveframework.tasks;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import com.automationpractiveframework.tasks.*;
 
 public class taskforSergey {
 
+
+
     public static void main(String[] args) {
-        try { 
+        DataValues.LOGIN_PATH;
+        DataValues str = DataValues.LOGIN_PATH;
+        try {
             String url = "https://rutracker.org/forum/login.php";
             Connection.Response response = Jsoup.connect(url)
                     .method(Connection.Method.GET)
@@ -25,10 +30,7 @@ public class taskforSergey {
 
 
     }
-    public static Document connectToPage(String loginURL, String indexPage,
-                                         String loginPath, String passPath,
-                                         String login, String password,
-                                         String elementForAutoUser){
+    public static Document connectToPage(DataValues.){
 
         try {
 
