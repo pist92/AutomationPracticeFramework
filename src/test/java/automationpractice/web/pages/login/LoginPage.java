@@ -1,17 +1,9 @@
 package automationpractice.web.pages.login;
 
 import automationpractice.web.pages.AbstractPage;
-import com.automationpractiveframework.utils.EnvConfig;
 import com.automationpractiveframework.utils.WaitsUtils;
-import com.automationpractiveframework.web.DriverUtils;
 import com.codeborne.selenide.Selenide;
-import com.codeborne.selenide.WebDriverRunner;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginPage extends AbstractPage {
 
@@ -26,7 +18,7 @@ public class LoginPage extends AbstractPage {
     }
 
     public LoginPage navigateToPage(){
-        WebDriverRunner.getWebDriver().navigate().to(EnvConfig.mainPage+EnvConfig.loginPageUrl);
+        //WebDriverRunner.getWebDriver().navigate().to(EnvConfig.mainPage+EnvConfig.loginPageUrl);
         return getPage();
     }
     public boolean isLoginFieldPresent() {

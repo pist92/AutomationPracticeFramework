@@ -38,7 +38,7 @@ public class CreateAnAccountTest extends BaseWebTest {
     @Test
     public void labelValidationTest(){
 
-        Assert.assertEquals(createAnAccountHelper.CheckLabelText(<"Please enter your email address to create an account"), "Please enter your email address to create an account");
+     //   Assert.assertEquals(createAnAccountHelper.CheckLabelText("Please enter your email address to create an account"), "Please enter your email address to create an account");
 
     }
 

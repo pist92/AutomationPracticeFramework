@@ -20,7 +20,7 @@ public class ContactUsPage extends AbstractPage {
 
     public ContactUsPage getPage(){
         WaitsUtils.waitForWebElementToBeVisible(emailAddressInput);
-        isElementDisplayed(attachFileButton);
+        //isElementDisplayed(attachFileButton);
         return this;
     }
 
