@@ -1,7 +1,7 @@
 package automationpractice.web.pages.login;
 
 import automationpractice.web.pages.AbstractPage;
-import com.automationpractiveframework.utils.WaitsUtils;
+import testProjectPackage.automationpractiveframework.utils.WaitsUtils;
 import com.codeborne.selenide.Selenide;
 import org.openqa.selenium.WebElement;
 

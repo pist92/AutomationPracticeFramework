@@ -1,8 +1,8 @@
 package automationpractice.web.pages.contactUs;
 
 import automationpractice.web.pages.AbstractPage;
-import com.automationpractiveframework.utils.EnvConfig;
-import com.automationpractiveframework.utils.WaitsUtils;
+import testProjectPackage.automationpractiveframework.utils.EnvConfig;
+import testProjectPackage.automationpractiveframework.utils.WaitsUtils;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
 import org.openqa.selenium.WebElement;

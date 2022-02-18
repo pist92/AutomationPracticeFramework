@@ -2,7 +2,7 @@ package automationpractice.web.tests;
 
 
 
-import com.automationpractiveframework.web.DriverUtils;
+import testProjectPackage.automationpractiveframework.web.DriverUtils;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
