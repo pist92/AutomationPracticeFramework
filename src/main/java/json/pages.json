@@ -1,0 +1,6 @@
+{
+  "name": "Pages",
+  "count": 3,
+  "test": true,
+  "pagesNumbers": ["one",2,3]
+}

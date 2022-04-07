@@ -40,6 +40,9 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.20'
     testImplementation 'org.junit.platform:junit-platform-commons:1.5.2'
     compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.22'
+    implementation 'org.jsoup:jsoup:1.14.3'
+    implementation 'com.googlecode.json-simple:json-simple:1.1.1'
+
 
 }
 

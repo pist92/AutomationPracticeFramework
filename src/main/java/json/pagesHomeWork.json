@@ -1,0 +1,16 @@
+{
+  "Name": "Pages",
+  "Count": 3,
+  "Test": true,
+  "pagesNumbers": [1,2,3],
+  "pages": [
+    {"title": "Home", "url": "www.automationframework.com", "guests": true},
+    {"title": "Login", "url": "www.automationframework/login.com", "guests": false},
+    {"title": "Market", "url": "www.automationframework/market.com", "guests": false}
+  ],
+  "users": [
+    {"userTitle": "Admin", "role": "admin", "accessRight": 755},
+    {"userTitle": "Moder", "role": "moderator", "accessRight": 567},
+    {"userTitle": "User", "role": "user", "accessRight": 555}
+  ]
+}
