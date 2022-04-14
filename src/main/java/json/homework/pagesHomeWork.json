@@ -1,8 +1,8 @@
 {
-  "Name": "Pages",
-  "Count": 3,
-  "Test": true,
-  "pagesNumbers": [1,2,3],
+  "name": "Pages",
+  "count": 3,
+  "test": true,
+  "pagesNumbers": ["one",2,3],
   "pages": [
     {"title": "Home", "url": "www.automationframework.com", "guests": true},
     {"title": "Login", "url": "www.automationframework/login.com", "guests": false},
