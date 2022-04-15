@@ -1,4 +1,4 @@
-package json.homework;
+package json.homework.json;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -15,7 +15,7 @@ public class JSONSimplerParser {
         Root root = new Root();
         JSONParser parser = new JSONParser();
 
-        try(FileReader reader = new FileReader("/Users/serhiikutsenko/Documents/GitHub/AutomationPracticeFramework/src/main/java/json/homework/pagesHomeWork.json")) {
+        try(FileReader reader = new FileReader("/Users/paulhurskyi/Documents/Java EPAM/AutomationPracticeFramework/src/main/java/json/homework/pagesHomeWork.json")) {
 
            JSONObject rootJsonObject = (JSONObject) parser.parse(reader);
 
@@ -25,20 +25,18 @@ public class JSONSimplerParser {
 
            JSONArray pagesNumberArray = (JSONArray) rootJsonObject.get("pagesNumbers");
            JSONArray pagesArray = (JSONArray) rootJsonObject.get("pages");
-            JSONArray usersArray = (JSONArray) rootJsonObject.get("users");
+           JSONArray usersArray = (JSONArray) rootJsonObject.get("users");
 
-            List<PagesNumbers> pagesNumbersList = new ArrayList<>();
+            List<String> pagesNumbersList = new ArrayList<>();
             List<Pages> pagesList = new ArrayList<>();
             List<Users> usersList = new ArrayList<>();
 
-//            for (Object item: pagesNumberArray){
-//                JSONObject pagesObject = (JSONObject) item;
-//                PagesNumbers pagesNumbers = new PagesNumbers();
-//                pagesNumbersList.add(pagesNumbers);
-//            }
-//            for(Object item:pagesNumberArray){
-//                System.out.println(item);
-//            }
+
+            for (Object item: pagesNumberArray) {
+                pagesNumbersList.add(item.toString());
+            }
+            System.out.println("SIZE: "+pagesNumberArray.size());
+
 
 
             for (Object item: pagesArray) {
@@ -68,7 +66,7 @@ public class JSONSimplerParser {
            root.setName(name);
            root.setCount(count);
            root.setTest(test);
-          // root.setPagesNumbers(pagesNumbersList);
+//           root.setPagesNumbers(pagesNumbersList);
            root.setPages(pagesList);
            root.setUsers(usersList);
 

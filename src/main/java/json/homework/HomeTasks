@@ -1,0 +1,11 @@
+1.Create pls builder for Pages and Users object
+2.pages.xml парсим с помощью Java
+3.Сериализация json file->java/json/homework/json/dataForJson.txt
+
+
+Теория
+* Анонимный класс
+* Abstract classes
+* Maven
+* Jenkins
+* GIT

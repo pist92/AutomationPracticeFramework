@@ -1,4 +1,4 @@
-package json.homework;
+package json.homework.json;
 
 public class Users {
 

@@ -1,8 +1,8 @@
-package json.homework;
+package json.homework.json;
 
 import java.util.List;
 
-public class Root {
+public class Root{
 
 
     public String getName() {

@@ -1,0 +1,12 @@
+Template: key:type(you can use any data)
+
+name: String
+anyUser: Boolean
+items: String Array
+price: Long Array
+
+Example
+name: Cars
+anyUser: true
+items: ["car1","car2","car3"]
+price: [1000,600,1056,7349]
